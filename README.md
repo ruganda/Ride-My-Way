@@ -15,7 +15,7 @@ https://ruganda.github.io/Ride-My-Way/UI/index.html
 
 
 # Home page
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/index.PNG)
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/index.png)
 
 # User registration
 ![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/register.PNG)
