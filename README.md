@@ -2,47 +2,46 @@
 Ride-my App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers.
 
 # Features
- - Users can create an account and log in.
- - Drivers can add ride offers..
- - Passengers can view all available ride offers.
- - Passengers can see the details of a ride offer and request to join the ride. E.g What time the ride leaves, where it is headed e.t.c
- - Drivers can view the requests to the ride offer they created.
- - Drivers can either accept or reject a ride request.
+- Get all ride offers
+- Get a specific ride offer
+- Create a ride offer
+- Make a request to join a ride.
 
 
-# To view the project demo pages
-https://ruganda.github.io/Ride-My-Way/UI/index.html
+
+# To get staarted
+- clone the repo $ git clone https://github.com/ruganda/Ride-My-Way.git
+- $ cd into the project directory
+- set up a virtual environment  $ virtualenv venv
+- Activate the virtual environment 
+- Install project dependencies $ pip install -r requirements.txt
+- To run the project $ python run.py
+- Open postman and navigate to  http://127.0.0.1:5000/api/v1/rides/
 
 
-# Home page
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/index.png)
 
-# User registration
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/register.PNG)
+# Create a ride offer
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screen-shots/post.PNG)
 
-# Login
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/login.PNG)
+# Get all ride offers
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screen-shots/get_all.PNG)
 
-# view all available ride offers
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/all_rides.PNG)
+# Get a specific ride offer
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screen-shots/get_one.PNG)
 
-# Passengers'  details of a ride offer
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/ride_details.PNG)
-
-# Drivers can view the requests to the ride offer they created.
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/user_rides.PNG)
-
-# Drivers can either accept or reject a ride request.
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/accept_rides.PNG)
-
-# User profile.
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/gh-pages/UI/images/profile.PNG)
+# Make a request to join a ride
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screen-shots/join.PNG)
 
 
 # Technologies used.
--HTML5
--CSS3
+- Python Language
+- Flask framework
 
+# Tests
+- To run tests $ nosetests
+- To run tests with coverage $ nosetests --with-coverage --cover-erase --cover-package=app/ && coverage report
 
 # Authors
  - RUGANDA MUBARAK
+# purpose 
+- Andela bootcamp challenge 2
