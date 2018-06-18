@@ -62,7 +62,26 @@ class TestRide(TestBase):
         response = self.client.get('api/v1/rides/')
         self.assertEqual(response.status_code, 200)
         self.assertIn("destination", str(response.data))
+    
+    def test_api_can_get_ride_by_id(self):
+        """Test API can fetch a single ride by using it's id."""
+        # post data
+        response = self.client.post('api/v1/rides/',
+                                      content_type='application/json',
+                                      data=json.dumps(post_ride3))
 
+        self.assertEqual(response.status_code, 201)
+        response = self.client.get('api/v1/rides/')
+        self.assertEqual(response.status_code, 200)
+        
+        results = json.loads(response.data.decode())
+        
+
+        for ride in results:
+            result = self.client.get(
+                'api/v1/rides/{}'.format(ride['Id']))
+            self.assertEqual(result.status_code, 200)
+            self.assertIn(ride['Id'], str(result.data))
 
 
     
