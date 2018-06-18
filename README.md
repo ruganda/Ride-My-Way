@@ -5,6 +5,9 @@
 # Ride-My-Way
 Ride-my App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers.
 
+# Hosting 
+- The api is hosted on heroku https://ruga.herokuapp.com/api/v1/rides/
+
 # Features
 - Get all ride offers
 - Get a specific ride offer
