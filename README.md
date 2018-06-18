@@ -1,4 +1,4 @@
-https://travis-ci.org/ruganda/Ride-My-Way.svg?branch=develop
+[![Build Status](https://travis-ci.org/ruganda/Ride-My-Way.svg?branch=develop)](https://travis-ci.org/ruganda/Ride-My-Way)
 [![Coverage Status](https://coveralls.io/repos/github/ruganda/Ride-My-Way/badge.svg?branch=develop)](https://coveralls.io/github/ruganda/Ride-My-Way?branch=develop)
 <a href="https://codeclimate.com/github/ruganda/Ride-My-Way/maintainability"><img src="https://api.codeclimate.com/v1/badges/067eaa497de418427d8b/maintainability" /></a>
 
