@@ -21,16 +21,16 @@ Ride-my App is a carpooling application that provides drivers with the ability t
 
 
 # Create a ride offer
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screenshots/post.PNG)
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/Api-v1/screenshots/post.PNG)
 
 # Get all ride offers
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screenshots/get_all.PNG)
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/Api-v1/screenshots/get_all.PNG)
 
 # Get a specific ride offer
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screenshots/get_one.PNG)
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/Api-v1/screenshots/get_one.PNG)
 
 # Make a request to join a ride
-![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/screenshots/join.PNG)
+![alt text](https://raw.githubusercontent.com/ruganda/Ride-My-Way/Api-v1/screenshots/join.PNG)
 
 
 # Technologies used.
