@@ -50,6 +50,18 @@ class TestRide(TestBase):
                                       data=json.dumps(duplicate_ride))
 
         self.assertIn("ride already exists", str(response.data))
+    
+    def test_api_can_view_all_rides(self):
+        """Test RideAPI can view all (GET request)."""
+
+        response = self.client.post('api/v1/rides/',
+                                      content_type='application/json',
+                                      data=json.dumps(post_ride2))
+
+        self.assertEqual(response.status_code, 201)
+        response = self.client.get('api/v1/rides/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn("destination", str(response.data))
 
 
 
