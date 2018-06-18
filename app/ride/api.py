@@ -1,6 +1,7 @@
 from flask.views import MethodView
 from flask import jsonify, request, abort, make_response
 from app.models import Ride
+
 import uuid
 
 
@@ -12,26 +13,26 @@ class RideAPI(MethodView):
             abort(400)
 
     def get(self, ride_id):
+        """Method for  get requests"""
         if ride_id:
             try:
-                ride_id = uuid.UUID(ride_id)  
+                ride_id = uuid.UUID(ride_id)
                 rides = Ride.view_all_rides()
-                print(rides)
                 for ride in rides:
                     if ride_id == ride['Id']:
-                        return jsonify(ride ), 200
+                        return jsonify(ride), 200
                     return jsonify({'msg': "Ride not found "}), 404
             except Exception as e:
                 response = {
                     'message': str(e)
                 }
                 return make_response(jsonify(response)), 500
-        
+
         else:
             try:
                 rides = Ride.view_all_rides()
                 if rides == []:
-                    return jsonify({"msg":" There are no rides rides at the moment"}), 200
+                    return jsonify({"msg": " There are no rides rides at the moment"}), 200
                 return jsonify(rides), 200
             except Exception as e:
                 response = {
@@ -40,6 +41,7 @@ class RideAPI(MethodView):
                 return make_response(jsonify(response)), 500
 
     def post(self):
+        '''Method for a post request'''
         data = request.json
         if not "origin" and not 'destination' and not 'date' in data:
             abort(400)
