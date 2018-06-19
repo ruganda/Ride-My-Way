@@ -52,7 +52,7 @@ class RideAPI(MethodView):
             res = Ride.offer_ride(origin, destination, date)
             if res == "Ride offered":
                 return jsonify({'msg': res}), 201
-            return jsonify({'msg': res}), 202
+            return jsonify({'msg': res}), 409
         except Exception as e:
             response = {
                 'message': str(e)
