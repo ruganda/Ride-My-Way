@@ -1,0 +1,94 @@
+FORMAT: 1A
+HOST: https://ruga.herokuapp.com
+
+# Ride my way
+
+Ride-my App is a carpooling application that provides drivers with the ability to create ride offers and passengers  to join available ride offers.
+
+## rides [/api/v1/rides/]
+
+### Offer a ride [POST]
+
+You can offer a ride sending the ride origin, destination and date
+
++ Request (application/json)
+
+            {
+            "origin": "Kampala",
+            "destination": "Masaka",
+            "date": "2018-12-12"
+            }
+            
++ Response 201 (application/json)
+
+            {
+                "response" : "Ride offered"
+            }
+            
++ Response 409 (application/json)
+
+            {
+                "response" : "ride already exists"
+            }
+            
++ Response 409 (application/json)
+
+            {
+                "response" : "rides can only have a future date"
+            }
+        
+
+### Fetch all ride offers [GET]
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+        [
+            {
+            "Id": "3a4ebf64-73d0-11e8-a770-9457a5dbffff",
+            "date": "2018-12-12",
+            "destination": "kampala",
+            "join": "False",
+            "origin": "Hoima"
+            },
+            {
+            "Id": "6147f722-73d0-11e8-92c4-9457a5dbffff",
+            "date": "2018-11-12",
+            "destination": "Entebbe",
+            "join": "False",
+            "origin": "Masaka"
+            }
+        ]
+        
+## Get a specific ride offer [/api/v1/rides/<ride_id>]
+
+### Get single ride [GET]
+ You can get a single ride given its id
+
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+            {
+            "Id": "6147f722-73d0-11e8-92c4-9457a5dbffff",
+            "date": "2018-11-12",
+            "destination": "Entebbe",
+            "join": "False",
+            "origin": "Masaka"
+            }
+            
+
+
+## Request to join a ride [/api/v1/rides/<ride_id>/requests]
+
+### Request to join a ride [POST]
+
++ Request (application/json)
+
++ Response 201 (application/json)
+
+            {
+                "response" : "A request to join this ride has been sent"
+            }
