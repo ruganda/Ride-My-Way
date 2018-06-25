@@ -185,7 +185,7 @@ body{
   /* allrides */
 
   .section-heading {
-  color: #4b4b4b;
+  color: #49f705;
   text-align: center;
   }
 .button-center{
@@ -351,6 +351,7 @@ color: #eceaea;
 .profile-card-left {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 250px;
+  background-color: #cccccc;
   text-align: center;
   font-family: arial;
   /* positioning */
@@ -372,8 +373,12 @@ button:hover, a:hover {
 a {
   text-decoration: none;
   font-size: 22px;
-  color: black;
+  color: blue;
 }
 
-
+.profile-name{
+  background-color: #4b4b4b;
+  color:rgb(73, 231, 10);
+  
+}
 
