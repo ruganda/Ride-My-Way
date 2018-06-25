@@ -19,7 +19,7 @@ Ride-my App is a carpooling application that provides drivers with the ability t
 
 
 
-# To get staarted
+# To get started
 - clone the repo $ git clone https://github.com/ruganda/Ride-My-Way.git
 - $ cd into the project directory
 - set up a virtual environment  $ virtualenv venv
@@ -51,7 +51,5 @@ Ride-my App is a carpooling application that provides drivers with the ability t
 - To run tests $ nosetests
 - To run tests with coverage $ nosetests --with-coverage --cover-erase --cover-package=app/ && coverage report
 
-# Authors
- - RUGANDA MUBARAK
-# purpose 
-- Andela bootcamp challenge 2
+# Purpose of the challenge
+- Andela bootcamp challenge 2.
