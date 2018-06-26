@@ -1,8 +1,8 @@
+import uuid
 from flask.views import MethodView
 from flask import jsonify, request, abort, make_response
 from app.models import Ride
 
-import uuid
 
 
 class RideAPI(MethodView):
@@ -32,7 +32,8 @@ class RideAPI(MethodView):
             try:
                 rides = Ride.view_all_rides()
                 if rides == []:
-                    return jsonify({"msg": " There are no rides rides at the moment"}), 200
+                    response= {"msg": " There are no rides rides at the moment"}
+                    return make_response(jsonify(response)), 200
                 return jsonify(rides), 200
             except Exception as e:
                 response = {

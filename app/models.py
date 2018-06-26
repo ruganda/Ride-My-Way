@@ -4,23 +4,24 @@ from datetime import date, datetime
 rides = []
 requests = []
 
+
 class Ride(object):
     ''' A Rides class'''
 
-    def __init__(self, ride_id, origin, destination, date, join = "False"):
+    def __init__(self, ride_id, origin, destination, date, joined="False"):
         ''' Initializes the ride object'''
         self.ride_id = ride_id
         self.origin = origin
         self.destination = destination
         self.date = date
-        self.join = join
-        
+        self.joined = joined
 
     @classmethod
     def existing_ride(cls, origin, destination, date):
         """A method to check if the same ride already exists """
         for ride in rides:
-            if ride['origin'] == origin and ride['destination'] == destination and ride['date'] == date:
+            if ride['origin'] == origin and ride['destination'] == \
+                    destination and ride['date'] == date:
                 return True
         else:
             return False
@@ -47,7 +48,7 @@ class Ride(object):
                 cls.data['origin'] = origin
                 cls.data['destination'] = destination
                 cls.data["date"] = date
-                cls.data["join"] = "False"
+                cls.data["joined"] = "False"
 
                 rides.append(cls.data)
                 return "Ride offered"
@@ -59,12 +60,9 @@ class Ride(object):
 
     @classmethod
     def join_ride(cls, ride_id):
+        '''A method for sending a request to join a ride'''
         for ride in rides:
             if ride['Id'] == ride_id:
-                ride['join'] == "True"
+                ride['joined'] == "True"
                 requests.append(ride)
                 return "A request to join this ride has been sent"
-
-        
-
-
