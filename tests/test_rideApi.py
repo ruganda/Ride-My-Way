@@ -20,14 +20,6 @@ class TestRide(TestBase):
         self.assertEqual(response.status_code, 201)
         self.assertIn('Ride offered', str(response.data))
 
-    def test_ride_creation_with_invalid_date_fomart(self):
-        """Test if a ride can be created on an invalid date formart"""
-        response = self.client.post('api/v1/rides/',
-                                    content_type='application/json',
-                                    data=json.dumps(invalid_date))
-
-        self.assertIn('does not match format', str(response.data))
-
     def test_ride_creation_given_past_date(self):
         """Test if a ride can be created with a past date"""
         response = self.client.post('api/v1/rides/',
@@ -77,8 +69,7 @@ class TestRide(TestBase):
             self.assertIn(ride['Id'], str(result.data))
 
     def test_join_request_issuccesful(self):
-        """Test API can succesfully send a request to join 
-        a ride (POST request)"""
+        """Test create send join ride request successfully"""
         response = self.client.post('api/v1/rides/',
                                     content_type='application/json',
                                     data=json.dumps(post_ride4))

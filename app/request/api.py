@@ -1,21 +1,16 @@
-from flask.views import MethodView
-from flask import jsonify, request, abort, make_response
-from app.models import Ride
+"""This module handles the class RequestApi and its post method"""
 import uuid
+from flask.views import MethodView
+from flask import jsonify
+from app.models import Ride
 
 
 class RequestAPI(MethodView):
     """This class-based view for requesting a ride."""
 
     def post(self, ride_id):
+        '''sends a request to join a ride'''
         ride_id = uuid.UUID(ride_id)
-        try:
-            res = Ride.join_ride(ride_id)
-            if res == "A request to join this ride has been sent":
-                return jsonify({'msg': res}), 201
-
-        except Exception as e:
-            response = {
-                'message': str(e)
-            }
-            return make_response(jsonify(response)), 500
+        res = Ride.join_ride(ride_id)
+        if res == "A request to join this ride has been sent":
+            return jsonify({'msg': res}), 201
