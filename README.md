@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/ruganda/Ride-My-Way.svg?branch=develop)](https://travis-ci.org/ruganda/Ride-My-Way)
 [![Coverage Status](https://coveralls.io/repos/github/ruganda/Ride-My-Way/badge.svg?branch=develop)](https://coveralls.io/github/ruganda/Ride-My-Way?branch=develop)
 <a href="https://codeclimate.com/github/ruganda/Ride-My-Way/maintainability"><img src="https://api.codeclimate.com/v1/badges/067eaa497de418427d8b/maintainability" /></a>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7bbff102554d4d728c41e0d242a03f31)](https://www.codacy.com/app/ruganda/Ride-My-Way?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ruganda/Ride-My-Way&amp;utm_campaign=Badge_Grade)
 
 # Ride-My-Way
 Ride-my App is a carpooling application that provides drivers with the ability to create ride offers and passengers to join available ride offers.
