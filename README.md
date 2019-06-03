@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8c610e35181344f08f87fe99b4c65c22)](https://app.codacy.com/app/ruganda/Ride-My-Way?utm_source=github.com&utm_medium=referral&utm_content=ruganda/Ride-My-Way&utm_campaign=badger)
 [![Build Status](https://travis-ci.org/ruganda/Ride-My-Way.svg?branch=develop)](https://travis-ci.org/ruganda/Ride-My-Way)
 [![Coverage Status](https://coveralls.io/repos/github/ruganda/Ride-My-Way/badge.svg?branch=develop)](https://coveralls.io/github/ruganda/Ride-My-Way?branch=develop)
 <a href="https://codeclimate.com/github/ruganda/Ride-My-Way/maintainability"><img src="https://api.codeclimate.com/v1/badges/067eaa497de418427d8b/maintainability" /></a>
